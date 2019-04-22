@@ -34,7 +34,8 @@ export default {
     },
     // 图代表的是啥
     legend: {
-        data:['蒸发量','降水量','平均温度']
+        // 这里要修他的名字写死的话好对应好顺序,两个都要改!要改一起改
+        data:['zhengFaLiang','jiangShuiLiang','平均温度']
     },
     // x轴代表什么
     xAxis: [
@@ -73,14 +74,15 @@ export default {
     ],
     series: [
         {
-            name:'蒸发量',
-            // stack:'堆叠',//堆叠柱状图在此设置成统一名称即可
+            name:'zhengFaLiang',
+            // stack:'名字',//堆叠柱状图添加stack:"名字成统一名称即可"
             type:'bar',
             data:[2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
         },
         {
-            name:'降水量',
+            name:'jiangShuiLiang',
             type:'bar',
+            // 添加这一 barGap属性即可实现条形统计图重叠
             barGap: '-100%',
             data:[2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
         },
