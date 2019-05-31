@@ -136,7 +136,7 @@ export default {
   mounted() {
       
     // 获取dom元素,加上echarts效果
-    //  var myChart = echarts.init(document.getElementById('main'));
+   
     let myChart = echarts.init(this.$refs.echarts);
     // 指定图表的配置项和数据
     let weatherIcons = {
